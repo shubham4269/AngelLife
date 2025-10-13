@@ -1,0 +1,152 @@
+.wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+  transform: translateY(-4px);
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f766e;
+  margin-bottom: 0.4rem;
+}
+
+.subtext {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Floating label inputs */
+.inputGroup {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 5px rgba(15, 118, 110, 0.3);
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 0.9rem;
+  background: white;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: -8px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #0f766e;
+}
+
+.button {
+  background: #0f766e;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: #0c5b55;
+  transform: translateY(-2px);
+}
+
+.loading {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: #16a34a;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 1.5rem;
+  }
+}
+
+/* Select Wrapper - adds custom arrow */
+.selectWrapper {
+  position: relative;
+}
+
+/* Dropdown base style */
+.select {
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  cursor: pointer;
+  padding-right: 40px; /* leave space for arrow */
+}
+
+/* Add custom dropdown arrow */
+.selectWrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color:  #0f766e;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate arrow slightly when focused */
+.select:focus + .label ~ .selectWrapper::after,
+.select:focus ~ .selectWrapper::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+

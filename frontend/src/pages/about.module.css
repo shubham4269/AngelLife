@@ -1,0 +1,145 @@
+/* === About Section (Warm Theme Version) === */
+.aboutSection {
+  background: linear-gradient(180deg, #f9f6f2 0%, #f5eee7 100%);
+  padding: 100px 8%;
+  font-family: "Poppins", sans-serif;
+  color: #3e2b23;
+}
+
+.aboutSection h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #8b5e3c;
+  margin-bottom: 20px;
+}
+
+/* ===== Brand Story ===== */
+.brandStory p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5c4a3d;
+  margin-bottom: 15px;
+}
+
+/* ===== Awards Timeline ===== */
+.awards {
+  margin-top: 80px;
+  overflow-x: hidden;
+}
+
+.timelineWrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.timelineTrack {
+  display: flex;
+  gap: 50px;
+  animation: scrollTimeline 25s linear infinite;
+}
+
+.timelineItem {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e7dcd1;
+  padding: 20px 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(139, 94, 60, 0.08);
+  min-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timelineItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(139, 94, 60, 0.2);
+}
+
+.year {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8b5e3c;
+}
+
+/* Smooth auto-scroll animation */
+@keyframes scrollTimeline {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== Leadership Section ===== */
+.leadership {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leaderCard {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(139, 94, 60, 0.15);
+  max-width: 900px;
+}
+
+.leaderCard img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #8b5e3c;
+}
+
+/* ===== CTA Button Section ===== */
+.ctaWrapper {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.ctaWrapper a {
+  display: inline-block;
+  background: #8b5e3c;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaWrapper a:hover {
+  background: #6f4629;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .timelineTrack {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .leaderCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leaderCard img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ctaWrapper {
+    margin-top: 80px;
+  }
+}

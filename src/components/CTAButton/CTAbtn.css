@@ -1,0 +1,80 @@
+.cta-strip {
+  background-color: #00bfa6; /* deep green */
+  color: #fff;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Individual styles */
+.cta-btn.apply {
+  background: #fff;
+  color: #016a3c;
+}
+
+.cta-btn.apply:hover {
+  background: #e6e6e6;
+}
+
+.cta-btn.whatsapp {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.cta-btn.whatsapp:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.cta-btn.download {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.cta-btn.download:hover {
+  background: #fff;
+  color: #016a3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+}

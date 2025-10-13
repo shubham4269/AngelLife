@@ -1,0 +1,152 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+  z-index: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.textSection {
+  color: #ffffff;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  max-width: 500px;
+  color: #f0f0f0;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary {
+  background-color: #0f766e;
+  color: white;
+  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.3);
+}
+
+.btnPrimary:hover {
+  background-color: #0c5c55;
+}
+
+.btnLight {
+  background-color: white;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btnLight:hover {
+  background-color: #f1f1f1;
+}
+
+.btnOutline {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btnOutline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.imageSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.curveWrap {
+  position: relative;
+}
+
+.heroImg {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.curveSvg {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .imageSection {
+    margin-top: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
