@@ -56,9 +56,8 @@ export default function Admin() {
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-
-      setLeads((prevLeads) =>
-        prevLeads.map((lead) =>
+      setLeads((prev) =>
+        prev.map((lead) =>
           lead._id === id ? { ...lead, status } : lead
         )
       );
@@ -87,7 +86,7 @@ export default function Admin() {
     setToken(null);
   };
 
-  // 🟢 Add Notice (only one field)
+  // 🟢 Add Notice
   const handleAddNotice = async (e) => {
     e.preventDefault();
     if (!noticeTitle.trim()) return;
@@ -116,7 +115,7 @@ export default function Admin() {
     }
   };
 
-  // ✅ If not logged in → Show login page
+  // ======================= UI =======================
   if (!token) {
     return (
       <div className="loginPage">
@@ -146,7 +145,6 @@ export default function Admin() {
     );
   }
 
-  // ✅ Logged in → Show Lead Manager + Notices
   return (
     <div className="adminPage">
       <div className="adminHeader">
@@ -186,9 +184,7 @@ export default function Admin() {
                   <td>
                     <select
                       value={lead.status || "New"}
-                      onChange={(e) =>
-                        updateStatus(lead._id, e.target.value)
-                      }
+                      onChange={(e) => updateStatus(lead._id, e.target.value)}
                       className={`statusSelect ${
                         lead.status?.toLowerCase() || "new"
                       }`}
@@ -207,10 +203,9 @@ export default function Admin() {
         </div>
       )}
 
-      {/* ===== NOTICES MANAGER ===== */}
+      {/* ===== NOTICES ===== */}
       <div className="noticeSection">
         <h2>Notices & Events</h2>
-
         <form onSubmit={handleAddNotice} className="noticeForm">
           <input
             type="text"
@@ -221,13 +216,10 @@ export default function Admin() {
           />
           <button type="submit">Add</button>
         </form>
-
         <div className="noticeList">
           {notices.map((n) => (
             <div key={n._id} className="noticeCard">
-              <div>
-                <h4>{n.title}</h4>
-              </div>
+              <h4>{n.title}</h4>
               <button
                 className="deleteBtn"
                 onClick={() => handleDeleteNotice(n._id)}
@@ -241,6 +233,4 @@ export default function Admin() {
     </div>
   );
 }
-
-
 

@@ -3,6 +3,7 @@ import Layout from '../layout/Layout';
 import HeroSlider from '../components/Heroslider/Heroslider';
 import Hero from '../components/Hero/Hero';
 import LeadForm from '../components/LeadForm/LeadForm';
+import WhyChooseUs from "../components/WhychooseUs/WhychooseUs";
 import './Home.css';
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
 
       <main>
         <Hero />
-        <LeadForm />
+       <WhyChooseUs />
       </main>
 
       {/* Popup Form */}

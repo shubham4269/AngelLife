@@ -52,12 +52,14 @@
 .btn.primary {
   background-color: #8b5e3c;
   color: #fff;
+  text-decoration: none;
 }
 
 .btn.outline {
   background-color: transparent;
   border: 2px solid #8b5e3c;
   color: #8b5e3c;
+  text-decoration: none;
 }
 
 .btn:hover {

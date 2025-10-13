@@ -31,8 +31,10 @@ const HeroSection = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn primary">Apply Now</button>
-          <button className="btn outline">Download Brochure</button>
+          <a className="btn primary" href="/contact">Apply Now</a>
+           <a href="/brochure.pdf" className="btn outline">
+          Download Brochure
+        </a>
         </div>
       </div>
 

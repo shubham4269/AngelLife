@@ -91,23 +91,23 @@ const LeadForm = () => {
         </div>
 
         {/* Course Dropdown */}
-<div className={`${styles.inputGroup} ${styles.selectWrapper}`}>
-  <select
-    name="course"
-    value={form.course}
-    onChange={handleChange}
-    className={`${styles.input} ${styles.select}`}
-    required
-  >
-    <option value="" disabled hidden></option>
-    {courses.map((course, index) => (
-      <option key={index} value={course}>
-        {course}
-      </option>
-    ))}
-  </select>
-  <label className={styles.label}>Course</label>
-</div>
+        <div className={`${styles.inputGroup} ${styles.selectWrapper}`}>
+          <select
+            name="course"
+            value={form.course}
+            onChange={handleChange}
+            className={`${styles.input} ${styles.select}`}
+            required
+          >
+            <option value="" disabled hidden></option>
+            {courses.map((course, index) => (
+              <option key={index} value={course}>
+                {course}
+              </option>
+            ))}
+          </select>
+          <label className={styles.label}>Course</label>
+        </div>
 
         {/* City */}
         <div className={styles.inputGroup}>

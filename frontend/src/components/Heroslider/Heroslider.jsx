@@ -9,28 +9,28 @@ const HeroSlider = () => {
   const slides = [
     {
       image: "/Images/slider-1.webp",
-      title: "India’s Leading Aesthetic Institute",
+      title: "Premium Beauty & Wellness Courses",
       subtitle: "Angel Life International",
     },
     {
       image: "/Images/slider-2.webp",
       title: "National Award for Excellence",
-      subtitle: "Empowering the Future of Wellness",
+      subtitle: "MS.TAMANNAH BHATIA",
     },
     {
       image: "/Images/slider-3.webp",
-      title: "Cosmetology & Wellness Experts",
-      subtitle: "Transforming Global Education Standards",
+      title: "TOP AESTHETICS CHAIN AWARDED BY",
+      subtitle: "MS. NEHA DHUPIA",
     },
     {
       image: "/Images/slider-4.webp",
       title: "Global Standards in Aesthetic Science",
-      subtitle: "Shaping Tomorrow’s Beauty Leaders",
+      subtitle: "MS. MALAIKA ARORA",
     },
      {
       image: "/Images/slider-5.webp",
-      title: "Global Standards in Aesthetic Science",
-      subtitle: "Shaping Tomorrow’s Beauty Leaders",
+      title: "TOP SKIN, LASER AND BEAUTY COURSES",
+      subtitle: "STARLET MS. SARA ALI KHAN",
     },
   ];
 

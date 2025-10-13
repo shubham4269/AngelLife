@@ -26,9 +26,9 @@ const Footer = () => {
           <div className={styles.column}>
             <h3 className={styles.title}>Important Links</h3>
             <ul className={styles.linksList}>
-              <li><a href="/treatments" className={styles.link}>Treatments</a></li>
-              <li><a href="/gallery" className={styles.link}>Gallery</a></li>
-              <li><a href="/franchise" className={styles.link}>Franchise Us</a></li>
+              <li><a href="/academics" className={styles.link}>Academics</a></li>
+              <li><a href="/contact" className={styles.link}>Contact</a></li>
+              <li><a href="/about" className={styles.link}>About Us</a></li>
             </ul>
           </div>
 
@@ -86,9 +86,6 @@ const Footer = () => {
         {/* Copyright */}
         <div className={styles.bottom}>
           <p>© 2025 AngelLife. All Rights Reserved.</p>
-          <p>
-            Designed by <span className={styles.brand}>xyz</span>
-          </p>
         </div>
       </div>
     </footer>
