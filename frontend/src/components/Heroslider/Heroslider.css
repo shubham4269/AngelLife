@@ -1,4 +1,4 @@
-/* === Hero Slider (Warm Theme Version) === */
+/* === Hero Slider (Responsive Warm Theme) === */
 .hero-slider-container {
   position: relative;
   width: 100%;
@@ -9,17 +9,16 @@
   margin-top: 80px;
   background: linear-gradient(
     180deg,
-    rgba(139, 94, 60, 0.08) 40%,  /* soft warm brown tint */
+    rgba(139, 94, 60, 0.08) 40%,
     #f9f6f2 100%
   );
-  background-size: cover;
   font-family: "Poppins", sans-serif;
 }
 
 /* === Swiper Wrapper === */
 .hero-swiper {
   width: 100%;
-  padding: 0 150px;
+  padding: 0 120px;
 }
 
 /* === Slides === */
@@ -28,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.4s ease;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .hero-slide.swiper-slide-active {
@@ -40,10 +39,10 @@
 /* === Image Container === */
 .slide-content {
   position: relative;
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
   width: 100%;
-  height: 75vh;
+  height: 70vh;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
   background: #fff;
 }
@@ -52,55 +51,49 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 22px;
 }
 
-/* === Caption (Refined Theme) === */
+/* === Caption === */
 .caption-premium {
-  margin-top: 24px;
+  margin-top: 22px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(203, 185, 166, 0.6); /* beige tone border */
-  border-radius: 16px;
-  padding: 18px 36px;
+  border: 1px solid rgba(203, 185, 166, 0.6);
+  border-radius: 14px;
+  padding: 16px 30px;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  max-width: 700px;
+  width: 90%;
 }
 
 .caption-premium h2 {
   font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
   font-weight: 600;
-  color: #3e2b23; /* deep warm brown */
+  color: #3e2b23;
   margin-bottom: 6px;
+  line-height: 1.3;
 }
 
 .caption-premium p {
-  font-size: 1rem;
-  color: #5c4a3d; /* muted beige-brown */
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: #5c4a3d;
   opacity: 0.9;
+  line-height: 1.4;
 }
 
-/* === Navigation Buttons (Updated Theme) === */
+/* === Navigation Buttons === */
 .swiper-button-next,
 .swiper-button-prev {
   color: #8b5e3c !important;
   background: rgba(255, 255, 255, 0.9);
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.swiper-button-next {
-  right: 40px;
-}
-
-.swiper-button-prev {
-  left: 40px;
 }
 
 .swiper-button-next:hover,
@@ -109,62 +102,36 @@
   color: #fff !important;
 }
 
-/* === Responsiveness === */
+/* === RESPONSIVENESS === */
 
-/* Tablets */
+/* Tablets (1024px ↓) */
 @media (max-width: 1024px) {
   .hero-swiper {
     padding: 0 60px;
   }
-
   .slide-content {
-    height: 65vh;
+    height: 60vh;
   }
-
   .caption-premium {
     width: 85%;
   }
-
-  .caption-premium h2 {
-    font-size: 1.4rem;
-  }
-
-  .caption-premium p {
-    font-size: 0.9rem;
-  }
 }
 
-/* Mobile */
+/* Mobile (768px ↓) */
 @media (max-width: 768px) {
   .hero-swiper {
     padding: 0 20px;
   }
 
-  .hero-slide {
-    opacity: 1; /* single visible slide */
-  }
-
   .slide-content {
-    height: 55vh;
-    border-radius: 12px;
-  }
-
-  .slide-image {
+    height: 50vh;
     border-radius: 12px;
   }
 
   .caption-premium {
     width: 90%;
-    padding: 14px 20px;
-    margin-top: 18px;
-  }
-
-  .caption-premium h2 {
-    font-size: 1.2rem;
-  }
-
-  .caption-premium p {
-    font-size: 0.9rem;
+    padding: 12px 18px;
+    margin-top: 14px;
   }
 
   .swiper-button-next,
@@ -173,15 +140,15 @@
   }
 }
 
-/* Small Phones */
+/* Small Phones (480px ↓) */
 @media (max-width: 480px) {
   .slide-content {
-    height: 50vh;
+    height: 45vh;
   }
 
   .caption-premium {
+    padding: 10px 14px;
     width: 95%;
-    padding: 10px 16px;
   }
 
   .caption-premium h2 {
