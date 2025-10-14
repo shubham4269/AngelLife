@@ -5,6 +5,7 @@ import Academics from './pages/Academics';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Admin from "./pages/Admin";
+import './App.css'; 
 function App() {
   return (
     <Router>
