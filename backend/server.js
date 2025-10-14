@@ -9,7 +9,14 @@ import noticeRoutes from "./routes/noticeRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://angellife-frontend.onrender.com"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: tru
+}));
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/notices", noticeRoutes);
