@@ -15,7 +15,7 @@ app.use(cors({
     "https://angellife-frontend.onrender.com"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: tru
+  credentials: true
 }));
 app.use(express.json());
 app.use("/api/auth", authRoutes);
