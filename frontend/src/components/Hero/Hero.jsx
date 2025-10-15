@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../api/api";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -8,7 +8,7 @@ const HeroSection = () => {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const res = await axios.get("https://angellife-backend.onrender.com/api/notices");
+        const res = await api.get("/notices");
         setNotices(res.data);
       } catch (error) {
         console.error("Error fetching notices:", error);
