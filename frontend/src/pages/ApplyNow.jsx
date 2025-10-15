@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import api from "../api/api";
 import Layout from "../layout/Layout";
 import LeadForm from "../components/LeadForm/LeadForm";
@@ -7,6 +6,7 @@ import "./Academic.css";
 
 
 const ApplyNow = () => {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [applicationData, setApplicationData] = useState({
     programType: "",
@@ -684,8 +684,7 @@ const ApplyNow = () => {
         gap: '15px',
         flexWrap: 'wrap'
       }}>
-        <button
-          style={{
+        <button style={{
           background: '#28a745',
           color: 'white',
           padding: '12px 25px',
@@ -696,8 +695,7 @@ const ApplyNow = () => {
         }}>
           Book Counselling
         </button>
-        <button
-          style={{
+        <button style={{
           background: 'white',
           color: '#28a745',
           padding: '12px 25px',
@@ -708,8 +706,7 @@ const ApplyNow = () => {
         }}>
           Download Brochure
         </button>
-        <button
-          style={{
+        <button style={{
           background: 'white',
           color: '#28a745',
           padding: '12px 25px',
