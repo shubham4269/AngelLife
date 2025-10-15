@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import Layout from "../layout/Layout";
 import LeadForm from "../components/LeadForm/LeadForm";
 import "./Academic.css";
 
+const navigate = useNavigate();
 const ApplyNow = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [applicationData, setApplicationData] = useState({
@@ -682,7 +684,8 @@ const ApplyNow = () => {
         gap: '15px',
         flexWrap: 'wrap'
       }}>
-        <button style={{
+        <button onClick={() => window.open('https://wa.me/919631403801', '_blank')}
+          style={{
           background: '#28a745',
           color: 'white',
           padding: '12px 25px',
@@ -693,7 +696,8 @@ const ApplyNow = () => {
         }}>
           Book Counselling
         </button>
-        <button style={{
+        <button onClick={() => navigate('/download-brochure')}
+          style={{
           background: 'white',
           color: '#28a745',
           padding: '12px 25px',
@@ -704,7 +708,8 @@ const ApplyNow = () => {
         }}>
           Download Brochure
         </button>
-        <button style={{
+        <button  onClick={() => navigate('/courses')}
+          style={{
           background: 'white',
           color: '#28a745',
           padding: '12px 25px',
