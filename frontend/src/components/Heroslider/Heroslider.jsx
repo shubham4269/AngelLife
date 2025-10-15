@@ -8,7 +8,7 @@ import "./Heroslider.css";
 const HeroSlider = () => {
   const slides = [
     {
-      image: "/Images/slider-1.webp",
+      image: "/Images/slider-3.webp",
       title: "Premium Beauty & Wellness Courses",
       subtitle: "Angel Life International",
     },
