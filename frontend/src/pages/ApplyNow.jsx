@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import Layout from "../layout/Layout";
 import LeadForm from "../components/LeadForm/LeadForm";
@@ -684,37 +685,46 @@ const ApplyNow = () => {
         gap: '15px',
         flexWrap: 'wrap'
       }}>
-        <button style={{
-          background: '#28a745',
-          color: 'white',
-          padding: '12px 25px',
-          borderRadius: '8px',
-          border: 'none',
-          fontWeight: '600',
-          cursor: 'pointer'
-        }}>
+        <button 
+          onClick={() => window.open('https://wa.me/919631403801', '_blank')}
+          style={{
+            background: '#28a745',
+            color: 'white',
+            padding: '12px 25px',
+            borderRadius: '8px',
+            border: 'none',
+            fontWeight: '600',
+            cursor: 'pointer'
+          }}
+        >
           Book Counselling
         </button>
-        <button style={{
-          background: 'white',
-          color: '#28a745',
-          padding: '12px 25px',
-          borderRadius: '8px',
-          border: '2px solid #28a745',
-          fontWeight: '600',
-          cursor: 'pointer'
-        }}>
+        <button 
+          onClick={() => navigate('/download-brochure')}
+          style={{
+            background: 'white',
+            color: '#28a745',
+            padding: '12px 25px',
+            borderRadius: '8px',
+            border: '2px solid #28a745',
+            fontWeight: '600',
+            cursor: 'pointer'
+          }}
+        >
           Download Brochure
         </button>
-        <button style={{
-          background: 'white',
-          color: '#28a745',
-          padding: '12px 25px',
-          borderRadius: '8px',
-          border: '2px solid #28a745',
-          fontWeight: '600',
-          cursor: 'pointer'
-        }}>
+        <button 
+          onClick={() => navigate('/courses')}
+          style={{
+            background: 'white',
+            color: '#28a745',
+            padding: '12px 25px',
+            borderRadius: '8px',
+            border: '2px solid #28a745',
+            fontWeight: '600',
+            cursor: 'pointer'
+          }}
+        >
           Explore Courses
         </button>
       </div>
