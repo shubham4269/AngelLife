@@ -44,12 +44,14 @@
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(139, 94, 60, 0.1);
   overflow: hidden;
+  overflow-x: auto; /* Allow horizontal scrolling for wide tables */
 }
 
 .adminTable {
   width: 100%;
   border-collapse: collapse;
   font-size: 15px;
+  min-width: 1200px; /* Ensure minimum width for all columns */
 }
 
 .adminTable th,
@@ -168,10 +170,19 @@
   .adminHeader h1 {
     font-size: 22px;
   }
+  .adminTable {
+    font-size: 12px;
+    min-width: 1000px; /* Maintain minimum width on mobile */
+  }
   .adminTable th,
   .adminTable td {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 12px;
+    padding: 8px 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  .tableWrap {
+    margin: 0 -20px; /* Extend table to screen edges on mobile */
+    border-radius: 0;
   }
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import api from "../../api/api";
 import styles from './LeadForm.module.css';
 
-const LeadForm = () => {
+const LeadForm = ({ onSubmit, isApplicationForm = false, buttonText = null }) => {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -34,8 +34,29 @@ const LeadForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
+    
+    if (isApplicationForm && onSubmit) {
+      // For application form, just pass the data to parent
+      setTimeout(() => {
+        onSubmit(form);
+        setStatus('success');
+      }, 500);
+      return;
+    }
+    
+    // Original lead form behavior
     try {
-      await api.post('/leads', { ...form, source: 'home-lead-form' });
+      const payload = {
+        ...form, 
+        source: 'home-lead-form',
+        // Add default values for new schema fields
+        programType: "",
+        programId: "",
+        centreId: "",
+        intakeMonth: "",
+        intakeYear: "",
+      };
+      await api.post('/leads', payload);
       setStatus('success');
       setForm({ name: '', email: '', mobile: '', course: '', city: '' });
     } catch (err) {
@@ -45,10 +66,14 @@ const LeadForm = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.heading}>Talk to Our Experts</h3>
-      <p className={styles.subtext}>
-        Get free counselling and details about our flagship programs.
-      </p>
+      {!isApplicationForm && (
+        <>
+          <h3 className={styles.heading}>Talk to Our Experts</h3>
+          <p className={styles.subtext}>
+            Get free counselling and details about our flagship programs.
+          </p>
+        </>
+      )}
 
       <form onSubmit={handleSubmit} className={styles.form}>
         {/* Name */}
@@ -129,11 +154,11 @@ const LeadForm = () => {
           }`}
           disabled={status === 'loading'}
         >
-          {status === 'loading' ? 'Sending...' : 'Submit'}
+          {status === 'loading' ? 'Processing...' : (buttonText || (isApplicationForm ? 'Continue' : 'Submit'))}
         </button>
 
         {/* Status Messages */}
-        {status === 'success' && (
+        {status === 'success' && !isApplicationForm && (
           <p className={`${styles.message} ${styles.success}`}>
             ✅ Thank you! Our team will reach out shortly.
           </p>

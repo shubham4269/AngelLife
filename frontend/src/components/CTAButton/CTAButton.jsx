@@ -6,7 +6,7 @@ const CTAStrip = () => (
     <div className="cta-container">
       <div className="cta-text">Join 1000+ Certified Professionals</div>
       <div className="cta-buttons">
-        <a className="cta-btn apply" href="/contact">Apply Now</a>
+        <a className="cta-btn apply" href="/apply">Apply Now</a>
         <a
           target="_blank"
           rel="noreferrer"
@@ -15,7 +15,7 @@ const CTAStrip = () => (
         >
           WhatsApp
         </a>
-        <a href="/brochure.pdf" className="cta-btn download">
+        <a href="/download-brochure" className="cta-btn download">
           Download Brochure
         </a>
       </div>

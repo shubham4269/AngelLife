@@ -13,7 +13,17 @@ const leadSchema = new mongoose.Schema({
     enum: ["New", "Attempted", "Converted", "Closed"],
     default: "New"
   },
+  programType: { type: String, default: "" },
+  programId: { type: String, default: "" },
+  centreId: { type: String, default: "" },
+  intakeMonth: { type: String, default: "" },
+  intakeYear: { type: String, default: "" },
   createdAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.models.Lead || mongoose.model("Lead", leadSchema);
+// Force recreation of the model to clear any cache
+if (mongoose.models.Lead) {
+  delete mongoose.models.Lead;
+}
+
+export default mongoose.model("Lead", leadSchema);

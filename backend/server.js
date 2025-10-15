@@ -6,6 +6,7 @@ import leadRoutes from "./routes/leadRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import noticeRoutes from "./routes/noticeRoutes.js";
 
+
 dotenv.config();
 
 const app = express();

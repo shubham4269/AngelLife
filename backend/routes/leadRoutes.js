@@ -19,9 +19,26 @@ router.post("/", async (req, res) => {
 // get all leads (admin)
 router.get("/", async (req, res) => {
   try {
-    const leads = await Lead.find().sort({ createdAt: -1 });
+    // Explicitly select all fields including the new ones
+    const leads = await Lead.find({}, {
+      name: 1,
+      email: 1,
+      mobile: 1,
+      course: 1,
+      city: 1,
+      consent: 1,
+      status: 1,
+      programType: 1,
+      programId: 1,
+      centreId: 1,
+      intakeMonth: 1,
+      intakeYear: 1,
+      createdAt: 1
+    }).sort({ createdAt: -1 });
+    
     res.json(leads);
   } catch (err) {
+    console.error("Error in leads route:", err);
     res.status(500).json({ message: "Server error" });
   }
 });

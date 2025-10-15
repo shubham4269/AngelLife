@@ -4,6 +4,16 @@ import "./Admin.css";
 
 const STATUS_OPTIONS = ["New", "Attempted", "Converted", "Closed"];
 
+// Helper function to convert month number to month name
+const getMonthName = (monthNumber) => {
+  const months = {
+    "01": "January", "02": "February", "03": "March", "04": "April",
+    "05": "May", "06": "June", "07": "July", "08": "August",
+    "09": "September", "10": "October", "11": "November", "12": "December"
+  };
+  return months[monthNumber] || monthNumber;
+};
+
 export default function Admin() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [form, setForm] = useState({ username: "", password: "" });
@@ -26,12 +36,19 @@ export default function Admin() {
   const fetchLeads = async () => {
     try {
       setLoading(true);
-      const res = await api.get("/leads", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await api.get("/leads");
       setLeads(res.data);
     } catch (err) {
-      console.error(err);
+      console.error("Error fetching leads:", err);
+      // If that fails, try with auth
+      try {
+        const res = await api.get("/leads", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setLeads(res.data);
+      } catch (authErr) {
+        console.error("Error fetching leads with auth:", authErr);
+      }
     } finally {
       setLoading(false);
     }
@@ -169,6 +186,10 @@ export default function Admin() {
                 <th>Email</th>
                 <th>Course</th>
                 <th>City</th>
+                <th>Program Type</th>
+                <th>Program ID</th>
+                <th>Centre ID</th>
+                <th>Intake</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -181,6 +202,16 @@ export default function Admin() {
                   <td>{lead.email}</td>
                   <td>{lead.course}</td>
                   <td>{lead.city}</td>
+                  <td>{lead.programType || "-"}</td>
+                  <td>{lead.programId || "-"}</td>
+                  <td>{lead.centreId || "-"}</td>
+                  <td>
+                    {lead.intakeMonth && lead.intakeYear 
+                      ? `${getMonthName(lead.intakeMonth)} ${lead.intakeYear}` 
+                      : lead.intakeMonth || lead.intakeYear 
+                        ? `${getMonthName(lead.intakeMonth) || ""} ${lead.intakeYear || ""}`.trim()
+                        : "-"}
+                  </td>
                   <td>
                     <select
                       value={lead.status || "New"}
@@ -233,4 +264,3 @@ export default function Admin() {
     </div>
   );
 }
-
