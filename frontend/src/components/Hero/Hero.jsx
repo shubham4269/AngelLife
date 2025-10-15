@@ -8,7 +8,7 @@ const HeroSection = () => {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/notices");
+        const res = await axios.get("https://angellife-backend.onrender.com/api/notices");
         setNotices(res.data);
       } catch (error) {
         console.error("Error fetching notices:", error);

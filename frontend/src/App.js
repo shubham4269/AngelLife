@@ -17,6 +17,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import Gallery from './pages/Gallery';
 import Admin from "./pages/Admin";
+import './App.css'; 
 function App() {
   return (
     <Router>
