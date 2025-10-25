@@ -125,26 +125,47 @@ const Academics = () => {
           {/* Core Faculty */}
           <div style={{ marginBottom: '30px' }}>
             <h4 style={{ color: '#8b5e3c', marginBottom: '20px' }}>Core Faculty Highlights</h4>
-            <div className="faculty-grid">
+           <div className="faculty-grid">
               <div className="faculty-card">
                 <h3>Dr. Suman Saikia</h3>
-                <p>Aesthetic Physician | Executive Director</p>
+                <p>Consultant Dermatologist | Fillers Expert
+                  MBBS, MD (Dermatology) | Lasers & Aesthetics Specialist</p>
               </div>
               <div className="faculty-card">
                 <h3>Dr. Pankaj Gupta</h3>
-                <p>Medical Director | Consultant Cardiologist</p>
+                <p>Medical Director | Consultant Cardiologist
+                    MD, D.Card (New Delhi)
+                    Director – MayoCare</p>
               </div>
               <div className="faculty-card">
                 <h3>Dr. Mohd. Shaqib</h3>
-                <p>Director – Business Development & Training</p>
+                <p>Consultant Surgeon | Hair Transplant & Rhinoplasty Specialist
+                   BDS, MDS (Maxillofacial Surgery)
+                Fellowship in Onco Surgery</p>
               </div>
               <div className="faculty-card">
                 <h3>Dr. Swati Chaudhary</h3>
-                <p>HR & Admin Director | Cosmetologist | Trainer</p>
+                <p>Aesthetic Physician | Executive Director
+                  BDS, M.Sc (Facial Aesthetics & Cosmetology)
+                  MBA (Hospital Management)</p>
               </div>
               <div className="faculty-card">
                 <h3>Dr. Aditya Reddy Vitta</h3>
-                <p>Consultant Physician | Aesthetics Specialist (FRACGP, Australia)</p>
+                <p>Consultant Physician | Aesthetics Specialist
+                  MD, FRACGP (Australia)
+                  Diploma in Dermatology & Cosmetology (Australia)</p>
+              </div>
+               <div className="faculty-card">
+                <h3>MS. PRAGYA PARMITA</h3>
+                <p>Director – Business Development & Training
+                  B.Com, MBA
+                  Business Development Analyst & Specialist</p>
+              </div>
+               <div className="faculty-card">
+                <h3> DR. SHWETA SRIVASTAVA</h3>
+                <p>Director – HR & Administration | Cosmetologist | Trainer
+                   B.Com, Ph.D
+                  PGDCC (Cosmetology & Wellness)</p>
               </div>
             </div>
             <p style={{ fontStyle: 'italic', marginTop: '15px', textAlign: 'center' }}>

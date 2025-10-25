@@ -15,7 +15,7 @@
 
 .why-choose-us h2 {
   font-size: 2rem;
-  color: #3e2b23; /* deep brown */
+  color: #7B967A; /* deep brown */
   margin-bottom: 15px;
 }
 
@@ -38,7 +38,7 @@
 
 .why-choose-us li::before {
   content: "✔";
-  color: #8b5e3c;
+  color: #7B967A;
   position: absolute;
   left: 0;
   top: 0;

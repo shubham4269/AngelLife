@@ -104,8 +104,8 @@
 }
 
 .link:hover {
-  color: #8b5e3c;
-  background: rgba(139, 94, 60, 0.08);
+  color:#7B967A ;
+  background: #BED4C2 ;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(139, 94, 60, 0.15);
 }
@@ -118,7 +118,7 @@
 /* Hamburger (mobile) */
 .menuToggle {
   display: none;
-  background: linear-gradient(135deg, #8b5e3c 0%, #a0714a 100%);
+  background: #7B967A;
   border: none;
   font-size: 24px;
   color: white;

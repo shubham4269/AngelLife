@@ -76,3 +76,53 @@
   }
 }
 
+/* === Faculty Animation === */
+.facultyWrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.facultyTrack {
+  display: flex;
+  gap: 30px;
+  animation: scrollFaculty 30s linear infinite;
+}
+
+.facultyTrack .faculty-card {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.faculty-card h3 {
+  color:#7B967A !important ;
+}
+
+/* Smooth auto-scroll animation for faculty */
+@keyframes scrollFaculty {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stop animation on hover for better user experience */
+.facultyWrapper:hover .facultyTrack {
+  animation-play-state: paused;
+}
+
+/* Responsive - disable animation on mobile */
+@media (max-width: 768px) {
+  .facultyTrack {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .facultyTrack .faculty-card {
+    min-width: auto;
+    flex: 1 1 260px;
+  }
+}
+

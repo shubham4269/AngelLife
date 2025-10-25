@@ -60,12 +60,12 @@
 }
 
 .cta-btn.whatsapp {
-  background:  rgba(255, 255, 255, 0.4);;
-  color: #25d366;
+  background:#BED4C2 ;
+  color: #1add13;
 }
 
 .cta-btn.whatsapp:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background:#7B967A ;
 }
 
 .cta-btn.download {
