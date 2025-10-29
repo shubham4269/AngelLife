@@ -287,12 +287,12 @@ const Courses = () => {
       style={{ height: "60px", objectFit: "contain" }}
     />
     <img
-      src="/Images/msme-Logo.png"
+      src="/Images/msme-logo.png"
       alt="MSME"
       style={{ height: "60px", objectFit: "contain" }}
     />
     <img
-      src="/Images/iSO-Logo.jpg"
+      src="/Images/iSO-logo.jpg"
       alt="ISO Certified"
       style={{ height: "60px", objectFit: "contain" }}
     />
