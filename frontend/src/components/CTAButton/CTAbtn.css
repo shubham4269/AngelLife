@@ -1,6 +1,4 @@
-/* ===========================
-   ANGELLIFE THEMED CTA STRIP
-   =========================== */
+
 .cta-strip {
   background-color: #8b5e3c; /* bronze-brown accent */
   color: #fffaf3;
@@ -60,12 +58,14 @@
 }
 
 .cta-btn.whatsapp {
-  background:#BED4C2 ;
-  color: #1add13;
+  background:#7B967A ;
+  color:#fffaf3 ;
 }
 
 .cta-btn.whatsapp:hover {
+  transform: translateY(-4px);
   background:#7B967A ;
+  box-shadow: 0 10px 30px rgba(0, 191, 166, 0.3);
 }
 
 .cta-btn.download {

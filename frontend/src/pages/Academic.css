@@ -126,6 +126,34 @@
 }
 
 /* ===== Responsive Design ===== */
+/* Responsive grid for Courses page */
+.courses-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
 @media (max-width: 768px) {
   .faculty-grid {
     flex-direction: column;

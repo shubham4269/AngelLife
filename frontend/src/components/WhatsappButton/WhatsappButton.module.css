@@ -1,0 +1,54 @@
+.whatsappBtn {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background:#7B967A ;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 25px rgba(152, 171, 170, 0.3);
+  transition: all 0.25s ease;
+}
+
+.whatsappBtn:hover {
+  transform: translateY(-4px);
+  background: #7B967A;
+  box-shadow: 0 10px 30px rgba(152, 171, 170, 0.3);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.label {
+  letter-spacing: 0.3px;
+}
+
+/* Hide text on very small screens */
+@media (max-width: 420px) {
+  .label {
+    display: none;
+  }
+  .whatsappBtn {
+    padding: 12px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+

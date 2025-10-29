@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../layout/Layout";
-import "./Academic.css";
+
 
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -54,7 +54,32 @@ const Courses = () => {
       idealFor: 'Graduates wanting leadership or educator roles in the industry.'
     },
     {
-      id: 3,
+  id: 3,
+  category: 'Degree',
+  title: 'B.Voc – Nursing Care',
+  duration: '3 Years',
+  fee: '₹50,000',
+  tracks: ['Clinical Practice', 'Patient Care', 'Community Health'],
+  description: 'A hands-on vocational degree focused on nursing care, clinical practice, and holistic patient management.',
+  modules: [
+    'Foundations of Nursing: anatomy, physiology, microbiology & first aid',
+    'Nursing Procedures: infection control, wound dressing, vital signs monitoring',
+    'Medical-Surgical Nursing: pre- & post-operative care, emergency management',
+    'Community Health Nursing: health education, immunization & public outreach',
+    'Nutrition & Dietetics: therapeutic diets and patient meal planning',
+    'Hospital Management: patient records, ethics, and communication in healthcare',
+    'Internship & Practicum: hands-on training in hospitals and healthcare centers'
+  ],
+  outcomes: [
+    'Work-ready for roles in hospitals, clinics, old-age homes, and community health centers',
+    'Exposure to real-world patient care and hospital workflow',
+    'Placement support and certification aligned with healthcare industry standards'
+  ],
+  idealFor: 'Students aspiring for a practical, skill-based healthcare career in nursing and patient care.'
+},
+
+    {
+      id: 4,
       category: 'Degree',
       title: 'M.Sc – Facial Aesthetics & Cosmetology',
       duration: '2 Years',
@@ -75,7 +100,7 @@ const Courses = () => {
       idealFor: 'MBBS/MD/BDS & allied medical professionals expanding into aesthetics.'
     },
     {
-      id: 4,
+      id: 5,
       category: 'PG Diploma',
       title: 'PG Diploma – Facial Aesthetics & Cosmetology',
       duration: '2 Years',
@@ -93,7 +118,7 @@ const Courses = () => {
       idealFor: 'Medical professionals adding aesthetic services to practice.'
     },
     {
-      id: 5,
+      id: 6,
       category: 'PG Diploma',
       title: 'PG Diploma – Cosmetology & Wellness',
       duration: '2 Years',
@@ -111,7 +136,7 @@ const Courses = () => {
       idealFor: 'Graduates seeking mastery with strong client-handling skills.'
     },
     {
-      id: 6,
+      id: 7,
       category: 'Diploma',
       title: 'Diploma – Cosmetology & Wellness',
       duration: '1 Year',
@@ -129,7 +154,7 @@ const Courses = () => {
       idealFor: 'Freshers and working beauticians upgrading to clinical standards.'
     },
     {
-      id: 7,
+      id: 8,
       category: 'Certification',
       title: 'Certification – Makeup Artistry (Basic)',
       duration: '1 Month',
@@ -145,7 +170,7 @@ const Courses = () => {
       idealFor: 'Beginners starting their makeup artistry journey.'
     },
     {
-      id: 8,
+      id: 9,
       category: 'Certification',
       title: 'Certification – Makeup Artistry (Advanced)',
       duration: '3 Months',
@@ -161,7 +186,7 @@ const Courses = () => {
       idealFor: 'Aspiring professional makeup artists.'
     },
     {
-      id: 9,
+      id: 10,
       category: 'Certification',
       title: 'Certification – Hair Dressing (Basic)',
       duration: '1 Month',
@@ -177,7 +202,7 @@ const Courses = () => {
       idealFor: 'Beginners entering hair styling field.'
     },
     {
-      id: 10,
+      id: 11,
       category: 'Certification',
       title: 'Certification – Hair Dressing (Advanced)',
       duration: '3 Months',
@@ -193,7 +218,7 @@ const Courses = () => {
       idealFor: 'Aspiring professional hair stylists.'
     },
     {
-      id: 11,
+      id: 12,
       category: 'Certification',
       title: 'Certification – Permanent Makeup (PMU)',
       duration: '3 Months',
@@ -209,7 +234,7 @@ const Courses = () => {
       idealFor: 'Beauty professionals expanding into PMU services.'
     },
     {
-      id: 12,
+      id: 13,
       category: 'Certification',
       title: 'Certification – Cosmetology (Advanced)',
       duration: '1 Year',
@@ -246,6 +271,37 @@ const Courses = () => {
           <p style={{ fontSize: '1.1rem', color: '#5c4a3d', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
             From university degrees to focused certifications—discover programs designed to build real, industry-ready skills with structured practicals, case-based learning, and post-certification support.
           </p>
+          <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "30px",
+      flexWrap: "wrap",
+      marginBottom: "20px",
+    }}
+  >
+    <img
+      src="/Images/file_2025-10-26_14.06.28.png"
+      alt="UGC"
+      style={{ height: "60px", objectFit: "contain" }}
+    />
+    <img
+      src="/Images/msme-Logo.png"
+      alt="MSME"
+      style={{ height: "60px", objectFit: "contain" }}
+    />
+    <img
+      src="/Images/iSO-Logo.jpg"
+      alt="ISO Certified"
+      style={{ height: "60px", objectFit: "contain" }}
+    />
+    <img
+      src="/Images/Dr. sur's .jpg"
+      alt="Government Recognized"
+      style={{ height: "60px", objectFit: "contain" }}
+    />
+  </div>
           
           <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button 
@@ -278,10 +334,10 @@ const Courses = () => {
   </button>
             <button 
             onClick={() => window.open(
-              "https://wa.me/919876543210?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20the%20course.",
+              "https://wa.me/918881780809?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20the%20course.",
                 "_blank")}
             style={{ 
-              background: '#25D366', 
+              background: '#7B967A', 
               color: 'white', 
               border: 'none', 
               padding: '12px 25px', 
@@ -298,7 +354,7 @@ const Courses = () => {
         {/* Why Study at AngelLife */}
         <div className="section-block" style={{ background: '#fff', padding: '40px', borderRadius: '12px', marginBottom: '50px' }}>
           <h2>Why Study at AngelLife</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '20px' }}>
+          <div className="courses-grid" style={{ marginTop: '20px' }}>
             <div style={{ padding: '20px', background: '#f9f6f2', borderRadius: '8px' }}>
               <h4 style={{ color: '#8b5e3c', marginBottom: '10px' }}>5+ Years Excellence</h4>
               <p>Training excellence in aesthetics & wellness</p>
@@ -375,7 +431,7 @@ const Courses = () => {
         </div>
 
         {/* Courses Grid */}
-        <div style={{ display: 'grid', gap: '30px', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', alignItems: 'stretch'}}>
+  <div className="courses-grid">
           {filteredCourses.map(course => (
             <div key={course.id} className="faculty-card" style={{ textAlign: 'left', padding: '30px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px', flexWrap: 'wrap', gap: '10px' }}>
@@ -499,7 +555,7 @@ const Courses = () => {
         {/* Tools & Technologies */}
         <div className="section-block" style={{ background: '#fff', padding: '40px', borderRadius: '12px', marginTop: '50px' }}>
           <h2>Tools, Technologies & Learning Support</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '20px' }}>
+          <div className="courses-grid" style={{ marginTop: '20px' }}>
             <div>
               <h4 style={{ color: '#8b5e3c' }}>US-FDA Approved Devices</h4>
               <p>Exposure to industry-grade dermal tools</p>
@@ -552,7 +608,7 @@ const Courses = () => {
             </button>
             <button
              onClick={() => window.open(
-              "https://wa.me/919876543210?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20the%20course.",
+              "https://wa.me/918881780809?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20the%20course.",
                 "_blank")}
              style={{ 
               background: '#25D366', 

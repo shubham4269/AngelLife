@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import CTAButton from "../components/CTAButton/CTAButton"; 
+import WhatsappButton from "../components/WhatsappButton/WhatsappButton";
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +11,10 @@ const Layout = ({ children }) => {
       <main style={{ flex: 1 }}>{children}</main>
       <CTAButton />
       <Footer />
+       <WhatsappButton 
+  phone="+918881780809" 
+      message="Hi AngelLife — I want course details." 
+    />
     </div>
   );
 };
