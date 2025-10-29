@@ -292,7 +292,7 @@ const Courses = () => {
       style={{ height: "60px", objectFit: "contain" }}
     />
     <img
-      src="/Images/iSO-logo.jpg"
+      src="/Images/iso-logo.jpg"
       alt="ISO Certified"
       style={{ height: "60px", objectFit: "contain" }}
     />
