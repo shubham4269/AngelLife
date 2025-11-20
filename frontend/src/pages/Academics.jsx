@@ -116,12 +116,21 @@ const Academics = () => {
           <h3 style={{ color: '#8b5e3c', marginBottom: '20px' }}>Learn From Industry‑Leading Experts</h3>
 
           {/* Academic Leadership */}
-          <div style={{ background: '#f9f6f2', padding: '30px', borderRadius: '12px', marginBottom: '30px', textAlign: 'center' }}>
-            <h4 style={{ color: '#8b5e3c', marginBottom: '15px' }}>Academic Leadership</h4>
-            <div className="faculty-card" style={{ maxWidth: '500px', margin: '0 auto', background: 'white' }}>
-              <h3 style={{ color: '#8b5e3c' }}>Dr. Shashank Kharabanda</h3>
-              <p style={{ fontWeight: '600', color: '#8b5e3c', marginBottom: '10px' }}>Founder & Director</p>
-              <p>Visionary leader with over 20 years in healthcare and aesthetics education; multiple international fellowships; keynote speaker & author.</p>
+          <div style={{ background: '#f9f6f2', padding: '30px', borderRadius: '12px', marginBottom: '30px' }}>
+            <h4 style={{ color: '#8b5e3c', marginBottom: '15px', textAlign: 'center' }}>Academic Leadership</h4>
+            <div className="faculty-card" style={{ maxWidth: '600px', margin: '0 auto', background: 'white', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+              <div style={{ flexShrink: 0 }}>
+                <img 
+                  src={require('../assets/DrShashank.jpg')} 
+                  alt="Dr. Shashank Kharabanda" 
+                  style={{ width: '150px', height: '180px', borderRadius: '8px', objectFit: 'cover' }}
+                />
+              </div>
+              <div>
+                <h3 style={{ color: '#8b5e3c', marginTop: 0 }}>Dr. Shashank Kharabanda</h3>
+                <p style={{ fontWeight: '600', color: '#8b5e3c', marginBottom: '10px' }}>Founder & Director</p>
+                <p>Visionary leader with over 20 years in healthcare and aesthetics education; multiple international fellowships; keynote speaker & author.</p>
+              </div>
             </div>
           </div>
 

@@ -9,8 +9,11 @@ const PlacementsSection = () => {
 
   // Animated Counter Logic
   const [counts, setCounts] = useState(stats.map(() => 0));
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
   useEffect(() => {
+    if (!shouldAnimate) return;
+
     const interval = setInterval(() => {
       setCounts((prev) =>
         prev.map((count, i) => {
@@ -22,7 +25,12 @@ const PlacementsSection = () => {
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [shouldAnimate, stats]);
+
+  const handleStatsMouseEnter = () => {
+    setShouldAnimate(true);
+    setCounts([0, 0, 0]);
+  };
 
   return (
     <section
@@ -71,6 +79,7 @@ const PlacementsSection = () => {
               marginBottom: "25px",
               flexWrap: "wrap",
             }}
+            onMouseEnter={handleStatsMouseEnter}
           >
             {stats.map((item, i) => (
               <div

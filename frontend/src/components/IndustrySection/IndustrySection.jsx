@@ -2,18 +2,22 @@ import React, { useEffect, useRef, useState } from "react";
 
 const IndustrySection = () => {
   const [animate, setAnimate] = useState(false);
+  const [animateNumbers, setAnimateNumbers] = useState(false);
+  const [marketValues, setMarketValues] = useState([0, 0, 0]);
   const sectionRef = useRef(null);
+  const chartRef = useRef(null);
 
-  // 🔥 Trigger animation only when section enters viewport
+  // Trigger animation only when section enters viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setAnimate(true);
-          observer.disconnect(); // Run only once
+          setAnimateNumbers(true);
+          observer.disconnect();
         }
       },
-      { threshold: 0.4 } // Trigger when 40% visible
+      { threshold: 0.4 }
     );
 
     if (sectionRef.current) {
@@ -21,14 +25,39 @@ const IndustrySection = () => {
     }
   }, []);
 
+  // Animate market values on mount/when triggered
+  useEffect(() => {
+    if (!animateNumbers) return;
+
+    const targets = [50, 180, 300];
+    const interval = setInterval(() => {
+      setMarketValues((prev) =>
+        prev.map((val, i) => {
+          const target = targets[i];
+          if (val < target) return val + Math.ceil(target / 25);
+          return target;
+        })
+      );
+    }, 40);
+
+    return () => clearInterval(interval);
+  }, [animateNumbers]);
+
+  const handleChartMouseEnter = () => {
+    setAnimateNumbers(true);
+    setMarketValues([0, 0, 0]);
+  };
+
   return (
     <section
       ref={sectionRef}
       style={{
         padding: "60px 8%",
         background: "#f9f6f2",
-        borderRadius: "20px",
+        borderRadius: "0",
         margin: "40px 0",
+        borderTop: "1px solid #e7dcd1",
+        borderBottom: "1px solid #e7dcd1",
       }}
     >
       {/* HEADER */}
@@ -99,15 +128,18 @@ const IndustrySection = () => {
               marginBottom: "0px",
               padding: "0 10px",
             }}
+            onMouseEnter={handleChartMouseEnter}
           >
             {[
-              { value: "₹50 Cr", year: "2019" },
-              { value: "₹180 Cr", year: "2022" },
-              { value: "₹300+ Cr", year: "2025" },
-            ].map((item, i) => (
-              <div key={i} style={{ textAlign: "center", width: "33%" }}>
+              { label: "₹", suffix: " Cr", year: "2019", index: 0 },
+              { label: "₹", suffix: " Cr", year: "2022", index: 1 },
+              { label: "₹", suffix: " Cr", year: "2025", index: 2 },
+            ].map((item) => (
+              <div key={item.index} style={{ textAlign: "center", width: "33%" }}>
                 <strong style={{ fontSize: "1rem", display: "block" }}>
-                  {item.value}
+                  {item.label}
+                  {marketValues[item.index]}
+                  {item.suffix}
                 </strong>
                 <div
                   style={{
@@ -182,8 +214,8 @@ const IndustrySection = () => {
               key={i}
               style={{
                 display: "flex",
-                gap: "12px",
-                marginBottom: "16px",
+                gap: "14px",
+                marginBottom: "20px",
                 opacity: animate ? 1 : 0,
                 transform: animate ? "translateY(0)" : "translateY(20px)",
                 transition: `all ${0.6 + i * 0.2}s ease`,
@@ -191,14 +223,15 @@ const IndustrySection = () => {
             >
               <span
                 style={{
-                  width: "10px",
-                  height: "10px",
+                  width: "8px",
+                  height: "8px",
                   background: "#8b5e3c",
                   borderRadius: "50%",
-                  marginTop: "6px",
+                  marginTop: "8px",
+                  flexShrink: 0,
                 }}
               ></span>
-              <p style={{ color: "#3e2b23", fontSize: ".92rem" }}>{text}</p>
+              <p style={{ color: "#3e2b23", fontSize: ".92rem", lineHeight: "1.6", margin: "0" }}>{text}</p>
             </div>
           ))}
         </div>

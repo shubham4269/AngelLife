@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 
 function Heroslider() {
   const navigate = useNavigate();
+  const [animateNumbers, setAnimateNumbers] = useState(false);
+  const [counts, setCounts] = useState([0, 0, 0]);
+
+  // Trigger animation on page load
+  useEffect(() => {
+    setAnimateNumbers(true);
+  }, []);
+
+  // Animated counter effect
+  useEffect(() => {
+    if (!animateNumbers) return;
+
+    const targets = [20, 90, 100];
+    const interval = setInterval(() => {
+      setCounts((prev) =>
+        prev.map((count, i) => {
+          const target = targets[i];
+          if (count < target) return count + Math.ceil(target / 20);
+          return target;
+        })
+      );
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [animateNumbers]);
+
+  const handleMouseEnter = () => {
+    setAnimateNumbers(true);
+    setCounts([0, 0, 0]);
+  };
   return (
     <section
       className="hero-premium"
@@ -191,7 +220,10 @@ function Heroslider() {
           </p>
 
           {/* Counters */}
-          <div style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
+          <div
+            style={{ display: "flex", gap: "20px", marginBottom: "20px" }}
+            onMouseEnter={handleMouseEnter}
+          >
             {[
               { count: 20, label: "Years of Leadership" },
               { count: 90, label: "Placement Success" },
@@ -205,7 +237,7 @@ function Heroslider() {
                     color: "#e7dcd1",
                   }}
                 >
-                  {item.count}+
+                  {counts[i]}+
                 </div>
                 <div style={{ fontSize: ".75rem", opacity: 0.8 }}>
                   {item.label}
