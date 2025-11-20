@@ -1,0 +1,316 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+/* spacer removed: hero is not fixed */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Popup Box */
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  width: 90%;
+  animation: slideUp 0.4s ease;
+}
+
+/* Close Button */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.popup-close:hover {
+  color: hwb(354 0% 64%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .popup-content {
+    width: 92%;
+    padding: 20px;
+  }
+}
+
+/* no spacer needed for non-fixed hero */
+
+/* === Faculty Animation === */
+.facultyWrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.facultyTrack {
+  display: flex;
+  gap: 30px;
+  animation: scrollFaculty 30s linear infinite;
+}
+
+.facultyTrack .faculty-card {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.faculty-card h3 {
+  color:#7B967A !important ;
+}
+
+/* Smooth auto-scroll animation for faculty */
+@keyframes scrollFaculty {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stop animation on hover for better user experience */
+.facultyWrapper:hover .facultyTrack {
+  animation-play-state: paused;
+}
+
+/* Responsive - disable animation on mobile */
+@media (max-width: 768px) {
+  .facultyTrack {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .facultyTrack .faculty-card {
+    min-width: auto;
+    flex: 1 1 260px;
+  }
+}
+
+/* === Book Promotion (responsive) === */
+.book-promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 8%;
+  background: #f9f6f2;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.book-promo__image {
+  flex: 0 0 auto;
+  max-width: 360px;
+  width: 100%;
+}
+
+.book-promo__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.book-promo__content {
+  flex: 1 1 480px;
+  max-width: 700px;
+}
+
+.book-promo__title {
+  font-family: "Playfair Display", serif;
+  color: #8b5e3c;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.book-promo__text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #3e2b23;
+}
+
+.book-promo__cta {
+  background: #8b5e3c;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.book-promo__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1024px) {
+  .book-promo {
+    gap: 28px;
+    padding: 48px 6%;
+  }
+  .book-promo__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-promo {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 40px 6%;
+  }
+  .book-promo__image {
+    max-width: 320px;
+  }
+  .book-promo__content {
+    flex: 1 1 auto;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-promo {
+    padding: 28px 5%;
+    gap: 18px;
+    border-radius: 10px;
+  }
+  .book-promo__image {
+    max-width: 260px;
+  }
+  .book-promo__title {
+    font-size: 1.5rem;
+  }
+  .book-promo__text {
+    font-size: 0.98rem;
+  }
+  .book-promo__cta {
+    width: 70%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+/* WRAPPER */
+.logo-strip-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: #f9f6f2;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(139, 94, 60, 0.12);
+}
+
+/* STRIP — infinite movement */
+.logo-strip {
+  display: flex;
+  gap: 40px;
+  animation: scrollLogos 18s linear infinite;
+  width: max-content;
+}
+
+/* LOGO CARD – 3D embossed effect */
+.logo-card {
+  background: linear-gradient(145deg, #ffffff, #e7dcd1);
+  padding: 18px 26px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* PREMIUM 3D emboss */
+  box-shadow:
+    inset 4px 4px 8px rgba(0,0,0,0.12),
+    inset -4px -4px 8px rgba(255,255,255,0.8),
+    0 6px 18px rgba(139,94,60,0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* LOGO IMAGE */
+.logo-card img {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+/* HOVER EFFECT */
+.logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    inset 3px 3px 6px rgba(0,0,0,0.1),
+    inset -3px -3px 6px rgba(255,255,255,0.9),
+    0 10px 22px rgba(139,94,60,0.22);
+}
+
+/* INFINITE SLIDE ANIMATION */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .logo-card img {
+    height: 50px;
+  }
+
+  .logo-card {
+    padding: 14px 20px;
+  }
+}

@@ -1,0 +1,74 @@
+.section-container {
+  display: flex;
+  align-items: flex-start;   /* Align top edges */
+  justify-content: space-between;
+  padding: 60px 8%;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  gap: 40px; /* space between columns */
+}
+
+.why-choose-us {
+  flex: 0 0 35%;
+  padding-right: 2%;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #7B967A; /* deep brown */
+  margin-bottom: 15px;
+}
+
+.why-choose-us p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose-us li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.why-choose-us li::before {
+  content: "✔";
+  color: #7B967A;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Right side (Lead Form container) */
+.lead-form {
+  flex: 0 0 60%;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-radius: 15px;
+}
+
+/* Make it responsive */
+@media (max-width: 992px) {
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+  }
+
+  .why-choose-us,
+  .lead-form {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+
+  .lead-form {
+    margin-top: 30px;
+  }
+}
+

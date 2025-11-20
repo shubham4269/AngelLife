@@ -1,0 +1,139 @@
+/* ===========================
+   ANGELLIFE THEMED FOOTER
+   =========================== */
+.footer {
+  background: #2b1f19; /* rich brown tone */
+  color: #f9f6f2; /* ivory white text */
+  padding: 60px 20px 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section titles */
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #c79b64; /* soft gold accent */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Footer links */
+.link {
+  color: #f9f6f2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.link:hover {
+  color: #c79b64;
+  padding-left: 4px;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+}
+
+.linksList li {
+  margin-bottom: 8px;
+}
+
+/* Newsletter form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid #d6c3b4;
+  border-radius: 6px;
+  outline: none;
+  background: #fdfaf6;
+  color: #3e2b23;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border-color: #c79b64;
+}
+
+.button {
+  background: #8b5e3c;
+  color: #fffaf3;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #a47147;
+  transform: scale(1.05);
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  background: #3e2b23;
+  border-radius: 50%;
+  color: #fffaf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social:hover {
+  background: #c79b64;
+  color: #2b1f19;
+  transform: translateY(-4px);
+}
+
+/* Bottom bar */
+.bottom {
+  text-align: center;
+  border-top: 1px solid #3e2b23;
+  margin-top: 50px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #d8cfc8;
+  font-family: "Poppins", sans-serif;
+}
+
+.brand {
+  color: #c79b64;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+

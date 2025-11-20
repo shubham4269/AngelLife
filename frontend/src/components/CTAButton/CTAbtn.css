@@ -1,0 +1,93 @@
+
+.cta-strip {
+  background-color: #8b5e3c; /* bronze-brown accent */
+  color: #fffaf3;
+  padding: 24px 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex: 1;
+  min-width: 250px;
+  color: #fffaf3;
+  font-family: "Playfair Display", serif;
+}
+
+/* Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Individual styles */
+.cta-btn.apply {
+  background: #fffaf3;
+  color: #8b5e3c;
+  border: 2px solid transparent;
+}
+
+.cta-btn.apply:hover {
+  background: transparent;
+  color: #fffaf3;
+  border: 2px solid #fffaf3;
+}
+
+.cta-btn.whatsapp {
+  background:#7B967A ;
+  color:#fffaf3 ;
+}
+
+.cta-btn.whatsapp:hover {
+  transform: translateY(-4px);
+  background:#7B967A ;
+  box-shadow: 0 10px 30px rgba(0, 191, 166, 0.3);
+}
+
+.cta-btn.download {
+  border: 2px solid #fffaf3;
+  color: #fffaf3;
+  background: transparent;
+}
+
+.cta-btn.download:hover {
+  background: #fffaf3;
+  color: #8b5e3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+}
+
