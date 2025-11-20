@@ -60,14 +60,20 @@ const AdmissionSection = () => {
     <section
       ref={sectionRef}
       style={{
-        padding: "60px 8%",
+        padding: "60px 0",
         background: "#f9f6f2",
-        borderRadius: "20px",
+        borderRadius: "0",
         margin: "50px 0",
+        width: "100vw",
+        marginLeft: "calc(-50vw + 50%)",
+        borderTop: "1px solid #d4c4b0",
+        borderBottom: "1px solid #d4c4b0",
       }}
       id="admission"
       onMouseEnter={handleSectionMouseEnter}
     >
+      {/* INNER WRAPPER WITH PADDING */}
+      <div style={{ padding: "0 8%" }}>
       {/* HEADER */}
       <div style={{ textAlign: "center", marginBottom: "45px" }}>
         <div
@@ -246,7 +252,8 @@ const AdmissionSection = () => {
     </a>
 
   </div>
-</div>
+  </div>
+     </div>
     </section>
   );
 };

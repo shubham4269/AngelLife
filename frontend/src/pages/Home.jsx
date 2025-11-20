@@ -77,7 +77,7 @@ function Home() {
           <h3 style={{ color: '#8b5e3c', marginBottom: '20px' }}>Learn From Industry‑Leading Experts</h3>
 
           {/* Academic Leadership */}
-          <div style={{ background: '#f9f6f2', padding: '30px', borderRadius: '12px', marginBottom: '30px' }}>
+          <div style={{ background: '#ffffffff', padding: '30px', borderRadius: '12px', marginBottom: '30px' }}>
             <h2 style={{ color: '#8b5e3c', marginBottom: '15px', textAlign: 'center' }}>Academic Leadership</h2>
             <div className="faculty-card" style={{ maxWidth: '600px', margin: '0 auto', background: 'white', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
               <div style={{ flexShrink: 0 }}>
