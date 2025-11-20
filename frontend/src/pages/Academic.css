@@ -140,7 +140,7 @@
 .courses-grid {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: stretch;
 }
 
@@ -176,19 +176,28 @@
   }
 }
 @media (max-width: 768px) {
+  .academics-section {
+    padding: 40px 6%;
+  }
+
   .faculty-grid {
     flex-direction: column;
     align-items: center;
   }
 
   .faculty-card {
-    max-width: 90%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .courses-table th,
   .courses-table td {
     padding: 10px 12px;
     font-size: 0.9rem;
+  }
+
+  .section-block {
+    margin-bottom: 40px;
   }
 
   .section-block h2 {
@@ -198,19 +207,34 @@
 
 @media (max-width: 480px) {
   .academics-section {
-    padding: 40px 5%;
+    padding: 24px 4%;
+  }
+
+  .section-block {
+    margin-bottom: 30px;
   }
 
   .section-block h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 
   .section-block p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .faculty-card {
+    padding: 16px;
   }
 
   .faculty-card img {
-    height: 180px;
+    height: 150px;
+  }
+
+  .courses-table th,
+  .courses-table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
 }
 
