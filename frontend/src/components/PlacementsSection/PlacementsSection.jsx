@@ -9,8 +9,11 @@ const PlacementsSection = () => {
 
   // Animated Counter Logic
   const [counts, setCounts] = useState(stats.map(() => 0));
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
   useEffect(() => {
+    if (!shouldAnimate) return;
+
     const interval = setInterval(() => {
       setCounts((prev) =>
         prev.map((count, i) => {
@@ -22,18 +25,29 @@ const PlacementsSection = () => {
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [shouldAnimate, stats]);
+
+  const handleStatsMouseEnter = () => {
+    setShouldAnimate(true);
+    setCounts([0, 0, 0]);
+  };
 
   return (
     <section
       style={{
-        padding: "60px 8%",
+        padding: "60px 0",
         background: "#f9f6f2",
         margin: "50px 0",
-        borderRadius: "16px",
+        borderRadius: "0",
         boxShadow: "0 8px 26px rgba(139,94,60,0.15)",
+        width: "100vw",
+        marginLeft: "calc(-50vw + 50%)",
+        borderTop: "1px solid #d4c4b0",
+        borderBottom: "1px solid #d4c4b0",
       }}
     >
+      {/* INNER WRAPPER WITH PADDING */}
+      <div style={{ padding: "0 8%" }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <h2
@@ -71,6 +85,7 @@ const PlacementsSection = () => {
               marginBottom: "25px",
               flexWrap: "wrap",
             }}
+            onMouseEnter={handleStatsMouseEnter}
           >
             {stats.map((item, i) => (
               <div
@@ -259,6 +274,7 @@ const PlacementsSection = () => {
         }
       `}
       </style>
+      </div>
     </section>
   );
 };

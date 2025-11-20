@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const AdmissionSection = () => {
+  const [animateSteps, setAnimateSteps] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Trigger animation when section enters viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setAnimateSteps(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+  }, []);
+
+  const handleSectionMouseEnter = () => {
+    setAnimateSteps(false);
+    setTimeout(() => {
+      setAnimateSteps(true);
+    }, 50);
+  };
+
   const steps = [
     {
       index: 1,
@@ -31,14 +58,22 @@ const AdmissionSection = () => {
 
   return (
     <section
+      ref={sectionRef}
       style={{
-        padding: "60px 8%",
+        padding: "60px 0",
         background: "#f9f6f2",
-         borderRadius: "20px",
+        borderRadius: "0",
         margin: "50px 0",
+        width: "100vw",
+        marginLeft: "calc(-50vw + 50%)",
+        borderTop: "1px solid #d4c4b0",
+        borderBottom: "1px solid #d4c4b0",
       }}
       id="admission"
+      onMouseEnter={handleSectionMouseEnter}
     >
+      {/* INNER WRAPPER WITH PADDING */}
+      <div style={{ padding: "0 8%" }}>
       {/* HEADER */}
       <div style={{ textAlign: "center", marginBottom: "45px" }}>
         <div
@@ -90,6 +125,11 @@ const AdmissionSection = () => {
               borderRadius: "14px",
               boxShadow: "0 4px 14px rgba(139,94,60,0.12)",
               alignItems: "flex-start",
+              opacity: animateSteps ? 1 : 0,
+              transform: animateSteps
+                ? "translateY(0) rotateZ(0deg)"
+                : "translateY(-60px) rotateZ(-8deg)",
+              transition: `all 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${(step.index - 1) * 1.1}s`,
             }}
           >
             {/* Step Number */}
@@ -137,8 +177,42 @@ const AdmissionSection = () => {
         ))}
       </div>
 
+      {/* ANIMATIONS */}
+      <style>
+        {`
+          @keyframes ladderFall {
+            0% {
+              opacity: 0;
+              transform: translateY(-100px) rotateZ(-12deg);
+            }
+            10% {
+              opacity: 1;
+            }
+            30% {
+              transform: translateY(0) rotateZ(0deg);
+            }
+            40% {
+              transform: translateY(-35px) rotateZ(8deg);
+            }
+            55% {
+              transform: translateY(0) rotateZ(-3deg);
+            }
+            65% {
+              transform: translateY(-15px) rotateZ(5deg);
+            }
+            80% {
+              transform: translateY(0) rotateZ(-1deg);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) rotateZ(0deg);
+            }
+          }
+        `}
+      </style>
+
       {/* BUTTON ROW */}
-<div style={{ marginTop: "25px", textAlign: "center" }}>
+      <div style={{ marginTop: "25px", textAlign: "center" }}>
   <div style={{ display: "flex", gap: "14px", justifyContent: "center" }}>
     
     {/* Redirect to Apply Page */}
@@ -178,7 +252,8 @@ const AdmissionSection = () => {
     </a>
 
   </div>
-</div>
+  </div>
+     </div>
     </section>
   );
 };

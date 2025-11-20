@@ -23,13 +23,19 @@ const ScholarshipsSection = () => {
     <section
       ref={sectionRef}
       style={{
-        padding: "70px 8%",
+        padding: "70px 0",
         background: "#f9f6f2",
-        borderRadius: "20px",
+        borderRadius: "0",
         margin: "50px 0",
+        width: "100vw",
+        marginLeft: "calc(-50vw + 50%)",
+        borderTop: "1px solid #d4c4b0",
+        borderBottom: "1px solid #d4c4b0",
       }}
       id="scholarships"
     >
+      {/* INNER WRAPPER WITH PADDING */}
+      <div style={{ padding: "0 8%" }}>
       {/* HEADER */}
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <div
@@ -161,6 +167,7 @@ const ScholarshipsSection = () => {
           box-shadow: 0 10px 28px rgba(139,94,60,0.22);
         }
       `}</style>
+      </div>
     </section>
   );
 };

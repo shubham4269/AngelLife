@@ -12,7 +12,7 @@ const About = () => {
       <div className={styles.brandStory}>
         <h2>Our Story</h2>
         <p>
-          AngelLife International Institute stands as Bharat’s most trusted and
+          AngelLife International Institute stands as Bharat's most trusted and
           awarded aesthetics and wellness education brand. With over two decades
           of excellence under the visionary leadership of{" "}
           <strong>Dr. Shashank Kharabanda</strong>, the institute has become a
@@ -53,17 +53,23 @@ const About = () => {
       <div className={styles.leadership}>
         <h2>Our Leadership</h2>
         <div className={styles.leaderCard}>
-          
+          <img 
+            src={require('../assets/DrShashank.jpg')} 
+            alt="Dr. Shashank Kharabanda"
+            style={{ width: '150px', height: '180px', borderRadius: '8px', objectFit: 'cover' }}
+          />
+          <div>
             <h3>Dr. Shashank Kharabanda</h3>
             <p>Founder & Managing Director – AngelLife International Institute</p>
             <p>
               A distinguished speaker, author, and visionary in global aesthetics,
-              Dr. Shashank’s mission is to redefine aesthetic education with a
+              Dr. Shashank's mission is to redefine aesthetic education with a
               student-centric, innovation-driven approach aligned with
               international standards.
             </p>
           </div>
         </div>
+      </div>
     </section>
     </Layout>
   );

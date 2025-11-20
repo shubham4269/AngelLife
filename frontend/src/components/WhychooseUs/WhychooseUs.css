@@ -58,17 +58,79 @@
   .section-container {
     flex-direction: column;
     align-items: center;
-    padding: 40px 5%;
+    padding: 40px 6%;
+    gap: 30px;
   }
 
-  .why-choose-us,
-  .lead-form {
+  .why-choose-us {
     flex: 0 0 100%;
     padding: 0;
+    text-align: center;
+  }
+
+  .why-choose-us h2 {
+    font-size: 1.8rem;
   }
 
   .lead-form {
-    margin-top: 30px;
+    flex: 0 0 100%;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 30px 5%;
+    gap: 25px;
+  }
+
+  .why-choose-us h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .why-choose-us p {
+    font-size: 0.95rem;
+  }
+
+  .why-choose-us li {
+    font-size: 0.9rem;
+  }
+
+  .lead-form {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: 20px 4%;
+    gap: 20px;
+  }
+
+  .why-choose-us h2 {
+    font-size: 1.4rem;
+  }
+
+  .why-choose-us p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .why-choose-us ul {
+    text-align: left;
+  }
+
+  .why-choose-us li {
+    font-size: 0.8rem;
+    padding-left: 18px;
+  }
+
+  .lead-form {
+    padding: 20px;
+    border-radius: 12px;
   }
 }
 
