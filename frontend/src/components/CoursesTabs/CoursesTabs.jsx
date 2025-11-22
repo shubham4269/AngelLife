@@ -303,7 +303,7 @@ function CourseCard({ course }) {
           onLoad={() => setImgLoaded(true)}
           onError={handleError}
         />
-        <span className="course-card__duration">{course.duration}</span>
+        
       </div>
 
       <div className="course-card__body">
