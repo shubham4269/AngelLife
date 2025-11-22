@@ -1,3 +1,4 @@
+
 .home {
   min-height: 100vh;
   display: flex;
@@ -372,3 +373,17 @@
     gap: 15px;
   }
 }
+/* 📱 Mobile View: center faculty picture */
+@media (max-width: 768px) {
+  .faculty-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .faculty-card img {
+    margin: 0 auto !important;
+    display: block;
+  }
+}
+

@@ -9,14 +9,18 @@
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
+width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 8%;
+  box-sizing: border-box;
 }
 
 .columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 35px;
+  color: #f9f6f2;
 }
 
 .column {
@@ -137,3 +141,9 @@
 }
 
 
+@media (max-width: 600px) {
+  .inner-wrap {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}

@@ -30,10 +30,13 @@ const FAQSection = () => {
     <section
       className="faq-section"
       style={{
-        padding: "60px 8%",
+       
         background: "#f9f6f2",
         borderRadius: "20px",
-        
+       width: "100%",
+        maxWidth: "100%",
+        padding: 0,
+        margin: 0,
       }}
     >
       {/* HEADER */}
@@ -48,7 +51,6 @@ const FAQSection = () => {
             marginBottom: "6px",
           }}
         >
-          Questions Answered
         </div>
 
         <h2
@@ -56,7 +58,8 @@ const FAQSection = () => {
             fontFamily: '"Playfair Display", serif',
             color: "#8b5e3c",
             fontSize: "2rem",
-            marginBottom: "10px",
+            marginBottom: "0px",
+            paddingTop: "70px",
           }}
         >
           Frequently Asked Questions

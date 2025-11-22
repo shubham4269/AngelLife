@@ -15,8 +15,7 @@ const allCourses = [
     fee: "₹1,20,000",
     tracks: ["Skin", "Hair", "Nutrition"],
     description: "Comprehensive science-backed career path in cosmetology and wellness.",
-    pexelsSrc:
-      "https://images.pexels.com/photos/3985351/pexels-photo-3985351.jpeg?auto=compress&cs=tinysrgb&w=1800",
+     image: "/Images/bscw.jpg",
     modules: [
       "Foundations: anatomy & physiology of skin and hair, hygiene & sterilization",
       "Cosmetic chemistry, product formulation basics & safe ingredient use",
@@ -41,8 +40,7 @@ const allCourses = [
     fee: "₹2,50,000",
     tracks: ["Skin", "Hair", "Nutrition", "Anti-Aging"],
     description: "Advanced program for leadership and educator roles.",
-pexelsSrc:
-  "https://images.pexels.com/photos/3997995/pexels-photo-3997995.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "/Images/mscw.jpg",
     modules: [
       "Advanced ingredient science",
       "Skin & hair disorder mapping",
@@ -63,8 +61,7 @@ pexelsSrc:
     tracks: ["Clinical Practice", "Patient Care", "Community Health"],
     description:
       "Hands-on vocational degree focused on nursing care & patient management.",
-    pexelsSrc:
-      "https://images.pexels.com/photos/6129231/pexels-photo-6129231.jpeg?auto=compress&cs=tinysrgb&w=1800",
+     image: "/Images/bvoc.jpg",
     modules: [
       "Foundations of nursing",
       "Nursing procedures",
@@ -89,8 +86,7 @@ pexelsSrc:
     fee: "₹3,20,000",
     tracks: ["Lasers", "Medi-Facials", "Anti-Aging"],
     description: "Specialized program for medical professionals.",
-    pexelsSrc:
-      "https://images.pexels.com/photos/7581083/pexels-photo-7581083.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "/Images/mscfac.jpg",
     modules: [
       "Facial anatomy & assessment",
       "Chemical peels & micro-needling",
@@ -104,15 +100,14 @@ pexelsSrc:
 
   {
     id: 5,
-    category: "PG Diploma",
+    category: "Diploma",
     title: "PG Diploma – Facial Aesthetics & Cosmetology",
     duration: "2 Years",
     fee: "₹1,60,000",
     tracks: ["Lasers", "Medi-Facials", "Anti-Aging"],
     description:
       "Clinical approach to cosmetic concerns for medical professionals.",
-    pexelsSrc:
-      "https://images.pexels.com/photos/6231731/pexels-photo-6231731.jpeg?auto=compress&cs=tinysrgb&w=1800",
+       image: "/Images/pgdf.jpg",
     modules: [
       "Facial analysis",
       "Advanced medi-facials",
@@ -124,15 +119,14 @@ pexelsSrc:
 
   {
     id: 6,
-    category: "PG Diploma",
+    category: "Diploma",
     title: "PG Diploma – Cosmetology & Wellness",
     duration: "2 Years",
     fee: "₹1,20,000",
     tracks: ["Skin", "Hair", "Nutrition"],
     description:
       "Mastery program with s800trong client-handling & treatment planning.",
-    pexelsSrc:
-      "https://images.pexels.com/photos/8534274/pexels-photo-8534274.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "/Images/pgdcw.jpg",
     modules: [
       "Advanced skincare & haircare",
       "Client communication & expectation management",
@@ -150,8 +144,7 @@ pexelsSrc:
     fee: "₹70,000",
     tracks: ["Skin", "Hair"],
     description: "Job-ready skills with clinical standards.",
-    pexelsSrc:
-      "https://images.pexels.com/photos/3997991/pexels-photo-3997991.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    image: "/Images/dcw.jpg",
     modules: [
       "Core facials, medi-facials & peels",
       "Hair spa & scalp care",
@@ -168,8 +161,7 @@ pexelsSrc:
     duration: "1 Month",
     fee: "₹20,000",
     tracks: ["PMU"],
-    pexelsSrc:
-      "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&w=2000",
+   image: "/Images/15.png",
     description: "Beginner-friendly course with portfolio building.",
     modules: ["Skin prep, base, blending, day/party looks"],
     outcomes: ["Starter portfolio & freelance readiness"],
@@ -183,8 +175,7 @@ pexelsSrc:
     duration: "3 Months",
     fee: "₹60,000",
     tracks: ["PMU"],
-    pexelsSrc:
-      "https://images.pexels.com/photos/725998/pexels-photo-725998.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    image: "/Images/14.png",
     description: "Professional bridal & editorial makeup program.",
     modules: ["Bridal, HD makeup, editorial shoots"],
     outcomes: ["Professional portfolio"],
@@ -198,8 +189,7 @@ pexelsSrc:
     duration: "1 Month",
     fee: "₹20,000",
     tracks: ["Hair"],
-    pexelsSrc:
-      "https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    image: "/Images/13.png",
     description: "Salon foundations & basic styling.",
     modules: ["Shampooing, sectioning, blow-dry, basic cuts"],
     outcomes: ["Salon floor support"],
@@ -213,8 +203,7 @@ pexelsSrc:
     duration: "3 Months",
     fee: "₹60,000",
     tracks: ["Hair"],
-    pexelsSrc:
-      "https://images.pexels.com/photos/3992873/pexels-photo-3992873.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    image: "/Images/12.png",
     description: "Advanced styling & color training.",
     modules: ["Advanced cuts & color theory"],
     outcomes: ["Independent stylist readiness"],
@@ -228,8 +217,7 @@ pexelsSrc:
     duration: "3 Months",
     fee: "₹20,000",
     tracks: ["PMU"],
-    pexelsSrc:
-      "https://images.pexels.com/photos/3762660/pexels-photo-3762660.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    image: "/Images/7.png",
     description: "PMU service-ready skill development.",
     modules: ["Brow mapping, micropigmentation & hygiene"],
     outcomes: ["Service-ready"],
@@ -243,8 +231,7 @@ pexelsSrc:
     duration: "1 Year",
     fee: "₹45,000",
     tracks: ["Medi-Facials", "Skin"],
-    pexelsSrc:
-      "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=2000",
+    image: "/Images/1.png",
     description:
       "Clinical-grade service competency with treatment sequencing.",
     modules: ["Advanced medi-facials", "Peel planning"],
@@ -257,7 +244,7 @@ pexelsSrc:
 // Build category dictionary and order; this keeps tabs in consistent order and skips empty categories
 
 
-const categoryOrder = ['Certification', 'Degree', 'PG Diploma', 'Diploma', ];
+const categoryOrder = ['Certification', 'Degree', 'Diploma', ];
 const categories = categoryOrder.map((cat) => ({
   key: cat.toLowerCase().replace(/\s+/g, ''),
   label:
@@ -266,7 +253,7 @@ const categories = categoryOrder.map((cat) => ({
       : cat === 'Diploma'
       ? 'Diploma Programs'
       : cat === 'Degree'
-      ? 'Degree Programs'
+      ? 'UG/PG Programs'
       : cat === 'Certification'
       ? 'Certifications'
       : cat,
@@ -295,6 +282,7 @@ function CourseCard({ course }) {
       setImgSrc(placeholder);
     }
   };
+ 
 
   return (
     <div className="course-card" id={course.anchorId || undefined}>
@@ -364,6 +352,18 @@ const CoursesTabs = () => {
   const [activeTabKey, setActiveTabKey] = useState(
     categories.find((c) => c.data && c.data.length > 0)?.key || (categories[0] && categories[0].key)
   );
+   useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveTabKey((prevKey) => {
+      const keys = categories.map((c) => c.key);
+      const currentIndex = keys.indexOf(prevKey);
+      const nextIndex = (currentIndex + 1) % keys.length;
+      return keys[nextIndex];
+    });
+  }, 7000); // 7 seconds
+
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <section className="home-courses" aria-labelledby="home-courses-title">

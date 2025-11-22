@@ -2,6 +2,7 @@ import React from "react";
 import "./CTAbtn.css";
 
 const CTAStrip = () => (
+  <div className="cta-fullwidth">
   <div className="cta-strip">
     <div className="cta-container">
       <div className="cta-text">Join 1000+ Certified Professionals</div>
@@ -20,6 +21,7 @@ const CTAStrip = () => (
         </a>
       </div>
     </div>
+  </div>
   </div>
 );
 

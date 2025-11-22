@@ -18,7 +18,8 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="hero-wrapper">
+    
+      <div className="hero-wrapper">
       {/* Left: Hero */}
       <div className="hero-left">
         <h1 className="hero-heading">
@@ -54,7 +55,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
+      </div>
+   
   );
 };
 

@@ -6,9 +6,13 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
+    <footer className={`full-width-section`} style={{ background: "#2b1f19" }}>
+      
+      {/* INNER WRAP (keeps content centered) */}
+      <div className="inner-wrap">
+
         <div className={styles.columns}>
+          
           {/* Contact Info */}
           <div className={styles.column}>
             <h3 className={styles.title}>Contact Us</h3>
@@ -35,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal & Support */}
+          {/* Legal */}
           <div className={styles.column}>
             <h3 className={styles.title}>Legal & Support</h3>
             <ul className={styles.linksList}>
@@ -46,81 +50,30 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter & Socials */}
+          {/* Social */}
           <div className={styles.column}>
             <h3 className={styles.title}>Stay Connected</h3>
+
             <form className={styles.form}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className={styles.input}
-              />
-              <button type="submit" className={styles.button}>
-                Subscribe
-              </button>
+              <input type="email" placeholder="Enter your email" className={styles.input} />
+              <button type="submit" className={styles.button}>Subscribe</button>
             </form>
 
             <div className={styles.socials}>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.social}
-              >
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.social}
-              >
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.social}
-              >
-                <FontAwesomeIcon icon={faYoutube} />
-              </a>
-              <a
-                href="https://play.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.social}
-              >
-                <FontAwesomeIcon icon={faAndroid} />
-              </a>
+              <a className={styles.social}><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a className={styles.social}><FontAwesomeIcon icon={faInstagram} /></a>
+              <a className={styles.social}><FontAwesomeIcon icon={faYoutube} /></a>
+              <a className={styles.social}><FontAwesomeIcon icon={faAndroid} /></a>
             </div>
           </div>
+
         </div>
 
-        {/* Copyright */}
+        {/* Bottom */}
         <div className={styles.bottom}>
           <p>© 2025 AngelLife International Institute. All Rights Reserved.</p>
-          <div style={{ 
-            marginTop: '10px', 
-            fontSize: '0.85rem',
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            gap: '20px'
-          }}>
-            <Link to="/privacy-policy" className={styles.link} style={{ fontSize: '0.85rem' }}>
-              Privacy Policy
-            </Link>
-            <span style={{ color: '#d8cfc8' }}>|</span>
-            <Link to="/terms-of-use" className={styles.link} style={{ fontSize: '0.85rem' }}>
-              Terms of Use
-            </Link>
-            <span style={{ color: '#d8cfc8' }}>|</span>
-            <Link to="/refund-policy" className={styles.link} style={{ fontSize: '0.85rem' }}>
-              Refund Policy
-            </Link>
-          </div>
         </div>
+
       </div>
     </footer>
   );

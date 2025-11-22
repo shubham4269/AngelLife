@@ -1,3 +1,6 @@
+
+
+
 .hero-wrapper {
   display: flex;
   justify-content: space-between;
@@ -8,6 +11,7 @@
   box-sizing: border-box;
   padding-right: 40px;
   min-width: 0; /* prevents overflow issues */
+  width: auto;
 }
 
 .hero-heading {
@@ -80,6 +84,7 @@
   align-items: center;
   justify-content: center;
   min-width: 0;
+   margin-left: 60px; 
 }
 
 .notice-box {
@@ -211,129 +216,43 @@
     margin: 0 auto;
   }
 }
-
-/* 📱 Responsive for mobile phones */
 @media (max-width: 768px) {
+
+  /* Make hero vertical layout */
   .hero-wrapper {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 30px 5%;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 24px 4% !important;
+    width: 100% !important;
+    margin: 0 !important;   /* Removes full-width hack */
   }
 
   .hero-left {
-    padding: 0;
-    text-align: center;
-    align-items: center;
     width: 100%;
-  }
-
-  .hero-heading {
-    font-size: clamp(1.5rem, 5vw, 1.9rem);
-    line-height: 1.25;
-    margin-bottom: 15px;
-  }
-
-  .hero-subtext {
-    font-size: clamp(0.85rem, 3vw, 0.95rem);
-    max-width: 100%;
-    margin: 12px auto 25px;
-    line-height: 1.5;
+    text-align: center;
   }
 
   .hero-buttons {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
   }
 
-  .btn {
-    width: 100%;
-    padding: 11px 24px;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-
+  /* Center right section */
   .hero-right {
     width: 100%;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
   }
 
+  /* Center notice box */
   .notice-box {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
-    max-height: 50vh;
-  }
-
-  .notice-title {
-    font-size: clamp(1rem, 3.5vw, 1.2rem);
-    padding-bottom: 6px;
-    margin-bottom: 12px;
-  }
-
-  .notice-item {
-    padding: 8px 10px;
-    margin-bottom: 8px;
-  }
-
-  .notice-item p {
-    font-size: 0.85rem;
+    width: 90%;
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
-
-/* 📱 Extra small devices (≤480px) */
-@media (max-width: 480px) {
-  .hero-wrapper {
-    padding: 24px 4%;
-  }
-
-  .hero-heading {
-    font-size: clamp(1.3rem, 6vw, 1.55rem);
-    margin-bottom: 12px;
-  }
-
-  .hero-subtext {
-    font-size: clamp(0.75rem, 3.5vw, 0.85rem);
-    margin: 10px auto 20px;
-  }
-
-  .hero-buttons {
-    gap: 8px;
-  }
-
-  .btn {
-    font-size: 0.85rem;
-    width: 100%;
-    padding: 10px 18px;
-  }
-
-  .notice-box {
-    padding: 14px;
-  }
-
-  .notice-title {
-    font-size: 1rem;
-  }
-
-  .notice-item {
-    padding: 6px 8px;
-    margin-bottom: 6px;
-  }
-
-  .notice-item p {
-    font-size: 0.8rem;
-  }
-}
-
-/* Ultra small (<=360px) */
-@media (max-width: 360px) {
-  .hero-heading { font-size: 1.4rem; }
-  .btn { width:100%; padding: 11px 22px; }
-  .notice-item p { font-size:.85rem; }
-
-  .notice-title {
-    font-size: 1rem;
-  }
-}
-

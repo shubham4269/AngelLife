@@ -4,6 +4,14 @@ import "./WhychooseUs.css";
 
 const WhyChooseUs = () => {
   return (
+    <section
+      style={{
+        width: "100%",
+        maxWidth: "100%",
+        padding: 0,
+        margin: 0,
+      }}
+    >
     <div className="section-container">
       {/* LEFT: Why Choose Us */}
       <div className="why-choose-us">
@@ -30,6 +38,7 @@ const WhyChooseUs = () => {
         <LeadForm />
       </div>
     </div>
+    </section>
   );
 };
 

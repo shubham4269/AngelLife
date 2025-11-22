@@ -70,7 +70,7 @@ function Home() {
         </div>
        
         {/* Core Faculty Highlights Section */}
-        <section className="section-block" style={{ background: '#fff', padding: '40px', borderRadius: '12px', margin: '50px 8%', marginBottom: '50px' }}>
+        <section className="section-block" style={{ background: '#fff', padding: '40px', borderRadius: '12px', marginBottom: '50px' }}>
           <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: '"Playfair Display", serif', fontSize: '1.9rem', color: '#8b5e3c', marginBottom: '12px' }}>
             Core Faculty Highlights
           </h2>
@@ -79,7 +79,7 @@ function Home() {
           {/* Academic Leadership */}
           <div style={{ background: '#ffffffff', padding: '30px', borderRadius: '12px', marginBottom: '30px' }}>
             <h2 style={{ color: '#8b5e3c', marginBottom: '15px', textAlign: 'center' }}>Academic Leadership</h2>
-            <div className="faculty-card" style={{ maxWidth: '600px', margin: '0 auto', background: 'white', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+            <div className="faculty-card" style={{ maxWidth: '700px', margin: '0 auto', background: 'white', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
               <div style={{ flexShrink: 0 }}>
                 <img 
                   src={require('../assets/DrShashank.jpg')} 
