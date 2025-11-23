@@ -248,14 +248,47 @@ function Heroslider() {
 
         {/* RESPONSIVE */}
         <style>
-          {`
-            @media (max-width: 850px) {
-              .hero-container {
-                grid-template-columns: 1fr !important;
-                text-align: center;
-              }
-            }
-          `}
+         {`
+  @media (max-width: 850px) {
+    .hero-container {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    /* FIX CROPPING ISSUE */
+    .hero-premium {
+      height: auto !important;         /* let hero grow */
+      min-height: auto !important;     /* remove fixed height limits */
+      padding: 50px 5% !important;
+      padding-top: 70px !important;
+      background-size: cover !important;
+      background-position: center !important;
+    }
+
+    /* reduce gap */
+    .hero-container {
+      gap: 10px !important;
+    }
+
+    /* reduce title */
+    .hero-premium h3 {
+      font-size: 1.5rem !important;
+    }
+
+    .hero-premium h1 {
+      font-size: 1.4rem !important;
+      line-height: 1.3 !important;
+    }
+
+    /* reduce right card size */
+    .hero-container > div:last-child {
+      padding: 25px !important;
+    }
+  }
+`}
         </style>
       </section>
     </>
@@ -263,4 +296,8 @@ function Heroslider() {
 }
 
 export default Heroslider;
+
+
+
+
 
