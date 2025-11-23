@@ -36,7 +36,7 @@ function Heroslider() {
   };
 
   const images = [
-    "/Images/B5.jpg",
+    "/Images/b5.jpg",
     "/Images/B2.jpg",
     "/Images/B1.jpg",
   ];
