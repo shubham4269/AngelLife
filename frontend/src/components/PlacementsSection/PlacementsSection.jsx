@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 const PlacementsSection = () => {
   const stats = [
-    { label: "Placement Assistance", value: 90, suffix: "%" },
-    { label: "Successful Alumni", value: 1000, suffix: "+" },
-    { label: "Centers & Networks", value: 2, suffix: " Regions" },
+    { label: "Placement Assistance", value: 100, suffix: "%" },
+    { label: "Successful Alumni", value: 200, suffix: "+" },
+    { label: "Centers & Networks", value: 2, suffix: "Flagship" },
   ];
 
   // Animated Counter Logic

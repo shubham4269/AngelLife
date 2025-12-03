@@ -16,7 +16,7 @@ function Heroslider() {
   useEffect(() => {
     if (!animateNumbers) return;
 
-    const targets = [20, 90, 100];
+    const targets = [10, 200, 20];
     const interval = setInterval(() => {
       setCounts((prev) =>
         prev.map((count, i) => {
@@ -36,8 +36,8 @@ function Heroslider() {
   };
 
   const images = [
-    "/Images/b5.jpg",
-    "/Images/B2.jpg",
+    "/Images/banner1.png",
+    "/Images/banner2.png",
     "/Images/B1.jpg",
   ];
 
@@ -208,9 +208,9 @@ function Heroslider() {
               onMouseEnter={handleMouseEnter}
             >
               {[
-                { count: 20, label: "Years of Leadership" },
-                { count: 90, label: "Placement Success" },
-                { count: 100, label: "International Awards" },
+                { count: 10, label: "Years of Leadership" },
+                { count: 200, label: "Placement Success" },
+                { count: 20, label: "International Awards" },
               ].map((item, i) => (
                 <div key={i} style={{ textAlign: "center" }}>
                   <div

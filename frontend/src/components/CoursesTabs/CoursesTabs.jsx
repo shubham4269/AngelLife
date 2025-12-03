@@ -15,7 +15,7 @@ const allCourses = [
     fee: "₹1,20,000",
     tracks: ["Skin", "Hair", "Nutrition"],
     description: "Comprehensive science-backed career path in cosmetology and wellness.",
-     image: "/Images/bscw.jpg",
+     image: "/Courses/bsccw.png",
     modules: [
       "Foundations: anatomy & physiology of skin and hair, hygiene & sterilization",
       "Cosmetic chemistry, product formulation basics & safe ingredient use",
@@ -40,7 +40,7 @@ const allCourses = [
     fee: "₹2,50,000",
     tracks: ["Skin", "Hair", "Nutrition", "Anti-Aging"],
     description: "Advanced program for leadership and educator roles.",
-    image: "/Images/mscw.jpg",
+    image: "/Courses/msccw.png",
     modules: [
       "Advanced ingredient science",
       "Skin & hair disorder mapping",
@@ -61,7 +61,7 @@ const allCourses = [
     tracks: ["Clinical Practice", "Patient Care", "Community Health"],
     description:
       "Hands-on vocational degree focused on nursing care & patient management.",
-     image: "/Images/bvoc.jpg",
+     image: "/Courses/bvnc.png",
     modules: [
       "Foundations of nursing",
       "Nursing procedures",
@@ -86,7 +86,7 @@ const allCourses = [
     fee: "₹3,20,000",
     tracks: ["Lasers", "Medi-Facials", "Anti-Aging"],
     description: "Specialized program for medical professionals.",
-    image: "/Images/mscfac.jpg",
+    image: "/Courses/mscfac.png",
     modules: [
       "Facial anatomy & assessment",
       "Chemical peels & micro-needling",
@@ -107,7 +107,7 @@ const allCourses = [
     tracks: ["Lasers", "Medi-Facials", "Anti-Aging"],
     description:
       "Clinical approach to cosmetic concerns for medical professionals.",
-       image: "/Images/pgdf.jpg",
+       image: "/Courses/pgdf.png",
     modules: [
       "Facial analysis",
       "Advanced medi-facials",
@@ -126,7 +126,7 @@ const allCourses = [
     tracks: ["Skin", "Hair", "Nutrition"],
     description:
       "Mastery program with s800trong client-handling & treatment planning.",
-    image: "/Images/pgdcw.jpg",
+    image: "/Courses/pgdcw.png",
     modules: [
       "Advanced skincare & haircare",
       "Client communication & expectation management",
@@ -144,7 +144,7 @@ const allCourses = [
     fee: "₹70,000",
     tracks: ["Skin", "Hair"],
     description: "Job-ready skills with clinical standards.",
-    image: "/Images/dcw.jpg",
+    image: "/Courses/dcw.png",
     modules: [
       "Core facials, medi-facials & peels",
       "Hair spa & scalp care",
@@ -161,7 +161,7 @@ const allCourses = [
     duration: "1 Month",
     fee: "₹20,000",
     tracks: ["PMU"],
-   image: "/Images/15.png",
+   image: "/Courses/cmab.png",
     description: "Beginner-friendly course with portfolio building.",
     modules: ["Skin prep, base, blending, day/party looks"],
     outcomes: ["Starter portfolio & freelance readiness"],
@@ -175,7 +175,7 @@ const allCourses = [
     duration: "3 Months",
     fee: "₹60,000",
     tracks: ["PMU"],
-    image: "/Images/14.png",
+    image: "/Courses/cmaa.png",
     description: "Professional bridal & editorial makeup program.",
     modules: ["Bridal, HD makeup, editorial shoots"],
     outcomes: ["Professional portfolio"],
@@ -189,7 +189,7 @@ const allCourses = [
     duration: "1 Month",
     fee: "₹20,000",
     tracks: ["Hair"],
-    image: "/Images/13.png",
+    image: "/Courses/chdb.png",
     description: "Salon foundations & basic styling.",
     modules: ["Shampooing, sectioning, blow-dry, basic cuts"],
     outcomes: ["Salon floor support"],
@@ -203,7 +203,7 @@ const allCourses = [
     duration: "3 Months",
     fee: "₹60,000",
     tracks: ["Hair"],
-    image: "/Images/12.png",
+    image: "/Courses/chda.png",
     description: "Advanced styling & color training.",
     modules: ["Advanced cuts & color theory"],
     outcomes: ["Independent stylist readiness"],
@@ -217,7 +217,7 @@ const allCourses = [
     duration: "3 Months",
     fee: "₹20,000",
     tracks: ["PMU"],
-    image: "/Images/7.png",
+    image: "/Courses/cmu.png",
     description: "PMU service-ready skill development.",
     modules: ["Brow mapping, micropigmentation & hygiene"],
     outcomes: ["Service-ready"],
@@ -231,7 +231,7 @@ const allCourses = [
     duration: "1 Year",
     fee: "₹45,000",
     tracks: ["Medi-Facials", "Skin"],
-    image: "/Images/1.png",
+    image: "/Courses/cca.png",
     description:
       "Clinical-grade service competency with treatment sequencing.",
     modules: ["Advanced medi-facials", "Peel planning"],
