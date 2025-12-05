@@ -360,7 +360,7 @@ const CoursesTabs = () => {
       const nextIndex = (currentIndex + 1) % keys.length;
       return keys[nextIndex];
     });
-  }, 7000); // 7 seconds
+  }, 15000); // 15 seconds
 
   return () => clearInterval(interval);
 }, []);

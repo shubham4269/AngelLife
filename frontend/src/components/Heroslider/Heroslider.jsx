@@ -6,6 +6,7 @@ function Heroslider() {
   const navigate = useNavigate();
   const [animateNumbers, setAnimateNumbers] = useState(false);
   const [counts, setCounts] = useState([0, 0, 0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Trigger animation on page load
   useEffect(() => {
@@ -45,8 +46,12 @@ function Heroslider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000); 
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentImage((prev) => (prev + 1) % images.length);
+        setIsTransitioning(false);
+      }, 500);
+    }, 10000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -64,6 +69,8 @@ function Heroslider() {
           position: "relative",
           overflow: "hidden",
           margin: 0,
+          opacity: isTransitioning ? 0.7 : 1,
+          transition: "opacity 0.5s ease-in-out",
         }}
       >
         {/* DARK OVERLAY */}

@@ -302,7 +302,7 @@ const Gallery = () => {
                 className="gallery-image"
                 src={resolvedSrc}
                 alt={item.title}
-                style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                style={{ width: '100%', height: '250px', objectFit: 'cover', objectPosition: 'center 40%' }}
                 loading="lazy"
                 decoding="async"
                 fetchpriority="low"
